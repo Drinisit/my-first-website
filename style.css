@@ -2,7 +2,9 @@
     --primary-bg: #000;
     --second-bg: #282828;
     --primary-font: #feeceb;
-    --secondary-font: #ffc000;
+    --secondary-font: #ff39bd;
+    /* --secondary-font: #ff00aa; */
+    /* --secondary-font: #ffcc00; */
 }
 
 *{
@@ -20,7 +22,7 @@ header{
 
 .navbar{
     max-width: 1240px;
-    min-height: 90px;
+    min-height: 80px;
     margin: auto;
     padding: 0 2rem;
     display: flex;
@@ -79,12 +81,12 @@ li a:hover{
 }
 
 .hero-info h2{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 .hero-info i{
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 0.5rem;
     padding-left: 0.4rem;
     cursor: pointer;
@@ -95,7 +97,7 @@ li a:hover{
 }
 
 .hero-btn{
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 1rem;
     padding: 0.4rem 1.5rem;
     border-radius: 0.5rem;
@@ -131,16 +133,11 @@ li a:hover{
     color:var(--primary-font);
 }
 
-.service-cards{
-    display: grid;
-    gap: 0.5rem;
-    grid-template-columns: repeat( 3, 1fr);
-}
-
 .card:nth-child(5){
-    background-color: var(--secondary-font) !important;
+    grid-column-start: 3;
+    grid-row-start: 3;
+    grid-row:span 2;
 }
-
 
 
 .card-col-span-2{
@@ -153,6 +150,21 @@ li a:hover{
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
 }
+
+@media screen and (min-width: 440px){
+    .service-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 441px){
+    .service-cards{
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 
 @media screen and (min-width: 767px){
     .logo img{
@@ -191,6 +203,12 @@ li a:hover{
     }
     .service-cards{
         grid-template-columns: repeat( 4, 1fr);   
+    }
+
+    .card:nth-child(5){
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-row:span 1;
     }
 }
 
