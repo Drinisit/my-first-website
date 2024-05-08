@@ -1,5 +1,5 @@
 :root{
-    --primary-bg: #282226;
+    --primary-bg: #000;
     --second-bg: #282828;
     --primary-font: #feeceb;
     --secondary-font: #ffc000;
@@ -8,21 +8,25 @@
 *{
     padding: 0;
     margin: 0;
+    color: var(--primary-font);
     font-family: 'Roboto';
     box-sizing: border-box;
-    background-color: var(--primary-bg);
 }
 
 header{
     width: 100%;
-    max-width: 1220px;
+   
+    background-color: var(--primary-bg);
+}
+
+.navbar{
+    max-width: 1240px;
     min-height: 80px;
     margin: auto;
-    padding: 0 1rem 0 1rem;
+    padding: 0 2rem;
     display: flex;
     align-items: end;
     justify-content: space-between;
-    background-color: var(--primary-bg);
 }
 
 .logo img{
@@ -51,43 +55,47 @@ li a:hover{
 
 .hero{
     width: 100%;
-    max-width: 1220px;
-    min-height: auto;
-    margin: auto;
-    padding: 1rem 1rem 0 1rem;
-    display: flex;
     background-color: var(--primary-bg);
 }
 
-.intro{
+.hero-content{
+    max-width: 1240px;
+    min-height: auto;
+    margin: auto;
+    display: flex;
+    padding: 0 2rem;
+    background-color: var(--primary-bg);
+}
+
+.hero-intro{
     width: 100%;
     color: var(--primary-font);
 }
-.info h1{
+.hero-info h1{
     font-size: 2rem;
 }
 
-.info p{
+.hero-info p{
     font-size: 1.2rem;
 }
 
-.info h2{
+.hero-info h2{
     font-size: 1rem;
     font-weight: 400;
     margin-top: 0.5rem;
 }
-.info i{
+.hero-info i{
     font-size: 1rem;
     margin-top: 0.5rem;
     padding-left: 0.4rem;
     cursor: pointer;
 }
 
-.info i:hover{
+.hero-info i:hover{
     color: var(--secondary-font);
 }
 
-.btn{
+.hero-btn{
     font-size: 1rem;
     margin-top: 1rem;
     padding: 0.4rem 1.5rem;
@@ -97,7 +105,7 @@ li a:hover{
     background-color: var(--secondary-font);
 }
 
-.btn:hover{
+.hero-btn:hover{
     color: var(--secondary-font);
     border: 1px solid var(--secondary-font);
     background-color: transparent;
@@ -107,77 +115,36 @@ li a:hover{
     display: none;
 }
 
-.services{
-    width: 100%;
-    color: var(--primary-font);
-    max-width: 1220px;
-    min-height: auto;
-    margin: auto;
-    padding: 1rem 1rem 0 1rem;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.service-info{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.my-service{
-    width: 100%;
-    padding: 2rem 1rem;
-    border: 1px solid var(--secondary-font);
-}
-
-.service-cards{
-    width: 100%;
-    margin-top: 0.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.cards{
-    width:48%;
-    padding: 2rem 0;
-    text-align: center;
-    border: 1px solid var(--secondary-font);
-}
-
-.cards i{
-    font-size: 2rem;
-}
 
 @media screen and (min-width: 767px){
+    .logo img{
+        width: 45px;
+    }
     .hero{
         gap: 1rem;
     }
-    .intro{
+    .hero-intro{
         width: 50%;
         display: flex;
         align-items: center;
     }
-    .info h1{
+    .hero-info h1{
         font-size: 3.2rem;
-    }
-    .info p{
-        font-size: 1.3rem;
     }
     .hero-img{
         width: 50%;
         display: inline-block;
     }
     .hero-img img{
-        margin-top: 2rem;
         width: 360px;
+        margin-left: 1.5rem;
     }
 }
 
 @media screen and (min-width: 1200px){
     .hero-img img{
-        margin-top: 3rem;
-        width: 600px;
+        width: 590px;
+        margin-left: 1rem;
     }
 }
 
