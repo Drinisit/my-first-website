@@ -139,9 +139,39 @@ li a:hover{
     grid-row:span 2;
 }
 
-
 .card-col-span-2{
     grid-column: span 2;
+}
+
+.skill-content{
+    max-width: 1240px;
+    height: auto;
+    padding: 0 2rem;
+    margin: auto;
+    color:var(--primary-font);
+}
+
+.skill-cards{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.card-logo{
+    width: 200px;
+    border-radius: 0.5rem;
+    text-align: center;
+    justify-content: center;
+  
+}
+
+.card-logo i{
+    font-size: 3.5rem;
+    color: var(--primary-font);
+}
+
+.card-logo i:hover{
+    color: var(--secondary-font);
+
 }
 
 
@@ -149,6 +179,7 @@ li a:hover{
     border: 1px solid var(--secondary-font);
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 440px){
@@ -156,12 +187,18 @@ li a:hover{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .card{
+        padding: 0.5 1rem;
+    }
 }
 @media screen and (min-width: 441px){
     .service-cards{
         display: grid;
         gap: 0.5rem;
         grid-template-columns: repeat(3, 1fr);
+    }
+    .card{
+        margin-bottom: 0;
     }
 }
 
