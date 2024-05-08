@@ -126,12 +126,33 @@ li a:hover{
 .service-content{
     max-width: 1240px;
     height: auto;
-    padding: 2rem;
+    padding: 0 2rem;
     margin: auto;
     color:var(--primary-font);
 }
 
+.service-cards{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat( 3, 1fr);
+}
 
+.card:nth-child(5){
+    background-color: var(--secondary-font) !important;
+}
+
+
+
+.card-col-span-2{
+    grid-column: span 2;
+}
+
+
+.card{
+    border: 1px solid var(--secondary-font);
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+}
 
 @media screen and (min-width: 767px){
     .logo img{
@@ -161,6 +182,15 @@ li a:hover{
     .hero-img img{
         width: 360px;
         margin-left: 2rem;
+    }
+
+    /* service css */
+    .service-content{
+        padding: 5rem 2rem;
+
+    }
+    .service-cards{
+        grid-template-columns: repeat( 4, 1fr);   
     }
 }
 
