@@ -153,27 +153,32 @@ li a:hover{
 
 .skill-cards{
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 
 .card-logo{
-    width: 200px;
+    width: 100px;
+    flex-grow: 1;
+    padding: 1rem 0;
+    border: 1px solid var(--secondary-font);
     border-radius: 0.5rem;
     text-align: center;
     justify-content: center;
-  
+}
+
+.card-logo:hover i{
+    color: var(--secondary-font);
 }
 
 .card-logo i{
-    font-size: 3.5rem;
+    font-size: 2rem;
     color: var(--primary-font);
 }
 
-.card-logo i:hover{
-    color: var(--secondary-font);
-
+.card-logo p{
+    margin-top: 0.5rem;
 }
-
 
 .card{
     border: 1px solid var(--secondary-font);
@@ -190,6 +195,12 @@ li a:hover{
     .card{
         padding: 0.5 1rem;
     }
+    .card-logo{
+        width: 150px;
+    }
+    .card-logo i{
+        font-size: 3rem;
+    }
 }
 @media screen and (min-width: 441px){
     .service-cards{
@@ -199,6 +210,9 @@ li a:hover{
     }
     .card{
         margin-bottom: 0;
+    }
+    .skill-content{
+        margin-top: 0.5rem;
     }
 }
 
@@ -235,7 +249,7 @@ li a:hover{
 
     /* service css */
     .service-content{
-        padding: 5rem 2rem;
+        padding: 1rem 2rem;
 
     }
     .service-cards{
@@ -247,6 +261,10 @@ li a:hover{
         grid-row-start: 2;
         grid-row:span 1;
     }
+
+    .skill-cards{
+        padding: 1.5rem 0;
+    }
 }
 
 @media screen and (min-width: 1200px){
@@ -257,6 +275,11 @@ li a:hover{
     .hero-img img{
         width: 590px;
         margin-left: 1rem;
+    }
+
+    .service-content{
+        padding-top: 5rem;
+
     }
 }
 
